@@ -1,0 +1,76 @@
+<div class="container">
+    <div class="row">
+        <div class="mx-auto">
+            <img class="card-img-top img-fluid" src="{{userpicture}}" alt="{{username}}">
+        </div>
+        <div class="col-md-6 offset-md-3">
+            <h2>Dashboard</h2>
+            <h5>Hurray! you are logged in {{username}}!</h5>
+            <p>User email address: {{useremail}}</p>
+            <p>User id: {{userid}}</p>
+
+            <hr>
+            <h2>Add A Profile Picture</h2>
+
+            <form ref='uploadForm' id='UserPictureUploadForm' action='http://localhost:8080/api/upload' method='post' encType="multipart/form-data">
+
+                <div class="form-group">
+                    <input type="hidden" name="id" value="{{userid}}" />
+                    <input type="hidden" name="name" value="{{username}}" />
+                    <input type="file" name="userPicture" />
+                    <input type='submit' value='Upload!' id="upload" />
+                </div>
+            </form>
+
+            <hr>
+
+            <h2>Add A Roommate</h2>
+            <form ref='uploadForm' id='AddRoommate' action='http://localhost:8080/api/roommates' method='post' encType="multipart/form-data">
+
+                <div class="form-group">
+                    <label for="roommatePicture" class="col-form-label">Picture</label>
+                    <input class="form-control" type="file" name="roommatePicture" />
+                </div>
+                <div class="form-group">
+                    <label for="name" class="col-form-label">Name</label>
+                    <input class="form-control" type="text" name="name" />
+                </div>
+                <div class="form-group">
+                    <label for="rlocation" class="col-form-label">Roomate Location</label>
+                    <input class="form-control" type="text" name="rlocation" placeholder="Washington, DC" />
+                </div>
+                <div class="form-group">
+                    <label for="withRoom" class="col-form-label">With Room?</label>
+                    <!-- <input class="form-control" type="text" name="withRoom" placeholder="" /> -->
+                    <select name="withRoom" class="form-control">
+                        <option name="withRoom" selected>Select One</option>
+                        <option name="withRoom" value="male">Yes</option>
+                        <option name="withRoom" value="female">No</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="gender" class="col-form-label">Gender</label>
+                    <select name="gender" class="form-control">
+                    <option name="gender" selected>Select One</option>
+                    <option name="gender" value="male" >Male</option>
+                    <option name="gender" value="female">Female</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="age" class="col-form-label">Age</label>
+                    <input class="form-control" name="age" type="text" />
+                </div>
+                <div class="form-group">
+                    <label for="bio">Bio</label>
+                    <input class="form-control" name="bio" type="text" />
+                </div>
+
+                <input type="hidden" name="userId" value="{{userid}}" />
+                <input type='submit' class="btn btn-primary" value='ADD' id="upload" />
+
+            </form>
+        </div>
+        <div class="col-md-6">
+            test
+        </div>
+    </div>

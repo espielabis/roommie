@@ -1,0 +1,60 @@
+button:hover {
+  cursor: pointer;
+}
+
+.rounded {
+  border-radius: 1.25rem!important;
+}
+
+.navBar-link:hover {
+  color: white !important;
+}
+
+.navBar-link {
+  margin-left: .5rem;
+  padding-right: .5rem !important;
+  padding-left: .5rem !important;
+}
+
+.navBar-rml {
+  margin-left: 0 !important;
+}
+
+.outline-active {
+  color: white !important;
+}
+
+.roommate-masthead {
+  position: relative;
+  padding: 2rem 20px;
+}
+
+.roommate-margin-b-sm {
+  margin-bottom: 1rem;
+}
+
+.roomate-margin-b-md {
+  margin-bottom: 2rem;
+}
+
+.roomate-margin-l-sm {
+  margin-left: 1rem;
+}
+
+.roommate-text-white {
+  color: white !important;
+}
+
+.roommate-text-firebrick {
+  color: #c92930;
+}
+
+
+/* Small devices (landscape phones, less than 768px) */
+
+@media (max-width: 767px) {
+  .navBar-link {
+    margin-left: 0 !important;
+    margin-bottom: .5rem!important;
+  }
+}

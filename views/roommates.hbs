@@ -1,0 +1,68 @@
+<main class="container">
+
+    <!-- display filter and pets -->
+    <div id="Filters">
+        <form method="post" name="filter" action="/pets">
+            <div class="row">
+
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <select data-placeholder='Location' class='chosen-select form-control' name="rlocation" id='rlocation'>
+                        <option selected="selected">Roommate Location</option>
+                        {{#each rlocations}}
+                        <option value="{{this}}">{{this}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <select data-placeholder='withRoom' class='chosen-select form-control' name="withRoom" id='withRoom'>
+                        <option value="" selected="selected">With Room</option>
+                        <option value="">No Preference</option>
+                        {{#each withRooms}}
+                        <option value="{{this}}">{{this}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <select data-placeholder='Age' class='chosen-select form-control' name="age" id='age'>
+                        <option value="" selected="selected">Age</option>
+                        <option value="">No Preference</option>
+                        <option value='20-30'> &le; 30 years </option>
+                        <option value='4-70'> 40-70 years </option>
+                        <option value='80+'> &ge; 80 years </option>
+                    </select>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <select data-placeholder='Gender' class='chosen-select form-control' name="gender" id='gender'>
+                        <option value="" selected="Gender">Gender</option>
+                        <option value="">No Preference</option>
+                        <option value='female'>Female</option>
+                        <option value='male'>Male</option>
+                    </select>
+                </div>
+
+                <div class="col text-right">
+                    <input type="submit" value="Search" id="submit" class="btn btn-primary disabled" disabled/>
+                    <a href="/pets" class="btn btn-danger">Clear</a>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <section class="row">
+        {{#each roommates}}
+        <div class="col-sm-12 col-md-4 col-lg-3">
+            <div class="card w-100">
+            <img class="card-img-top" src="{{picture}}" alt="Card image cap">
+            <div class="card-body">
+                <h4 class="card-title">{{name}}</h4>
+                <p class="card-text">{{bio}}</p>
+                <a href="/roommates/{{id}}" class="btn btn-primary">View Profile</a>
+            </div>
+            </div>
+        </div>
+        {{/each}}
+    </section>
+</main>

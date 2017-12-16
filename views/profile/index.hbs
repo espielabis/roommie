@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            {{> profileSidebar}}
+        </div>
+        <div class="col-md-9">
+            {{> profileNav}}
+            <div class="row">
+                <div class="col">
+                    <h2 class="text-left" style="display: inline-block">Posts/Comments</h2>
+                </div>
+            </div>
+            <div class="row">
+                {{#each posts}}
+                <div class="card mb-3 w-100">
+                    <div class="card-body text-secondary">
+                        <p class="card-text">{{body}}</p>
+                    </div>
+                    <div class="card-footer bg-transparent"><small>{{createdAt}}</small></div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</div>

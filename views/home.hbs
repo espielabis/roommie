@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+            {{> homeSidenav}}
+        </div>
+        <div class="col-8">
+            <div class="mb-3">
+                <h2>Make Post</h2>
+                <form action="/api/posts" method="post">
+                    <div class="form-group">
+                        <textarea class="form-control" id="PostBody" rows="3" name="body"></textarea>
+                    </div>
+                    <input type="hidden" value="{{userId}}" id="OwnerId" />
+                    <div class="form-group text-right">
+                        <button id="SubmitPost" type="submit" class="btn btn-primary">Post</button>
+                    </div>
+                </form>
+            </div>
+            <div id="Posts">
+                {{#each posts}}
+                <div class="card mb-3 w-100">
+                    <div class="card-body text-secondary">
+                        <p class="card-text">{{body}}</p>
+                    </div>
+                    <div class="card-footer bg-transparent"><small>{{createdAt}}</small></div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</div>

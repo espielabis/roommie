@@ -1,0 +1,148 @@
+.btn:hover {
+    cursor: pointer;
+}
+
+.btn.disabled:hover {
+    cursor: default;
+}
+
+.card {
+    margin: 0 0 10px 0;
+}
+
+.card-body .btn {
+    width: 100%;
+}
+
+.card-header {
+    padding: .5rem .75rem;
+}
+
+#Filters {
+    margin-bottom: 20px;
+}
+
+#Filters .row div {
+    margin-bottom: 15px;
+}
+
+#Filters .row div.text-right {
+    margin-bottom: 0;
+}
+
+.navbar {
+    margin-bottom: 20px;
+}
+
+.nav-link:hover {
+    cursor: pointer;
+}
+
+.roommate-masthead {
+    padding: 0
+}
+
+.form {
+    padding: 100px
+}
+
+.nav-link:hover {
+    cursor: pointer;
+}
+
+/**Home styles**/
+html, body.home {
+    height: 100%;
+    position: relative;
+}
+
+body.home .navbar {
+    margin-bottom: 0;
+}
+
+body.home .navbar {
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+#HomeMain {
+    height: 100%;
+    position: relative;
+}
+
+#HomeTable {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+#ImageContainer {
+    background-image: url('..//images/pexels-photo-5859.jpeg');
+    background-size: contain;
+    background-attachment: fixed;
+    background-position: left;
+    background-repeat: no-repeat;
+    display: table-cell;
+    height: 100%;
+    width: 65%;
+}
+
+#SignUpForm {
+    display: table-cell;
+    height: 100%;
+    padding-top: 62px;
+    width: 35%;
+}
+
+@media (max-width: 1740px) {
+    #SignUpForm .form {
+        padding: 50px;
+    }
+}
+
+@media (max-width: 1450px) {
+    #SignUpForm .form {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 969px) {
+    #HomeTable {
+        display: block;
+    }
+
+    #ImageContainer {
+        background-size: cover;
+        background-position: center;
+        display: block;
+        height: 600px;
+        width: 100%;
+    }
+
+    #SignUpForm {
+        display: block;
+        width: 100%;
+        padding-top: 0;
+    }
+
+    #SignUpForm .form {
+        padding: 100px;
+    }
+}
+
+@media (max-width: 700px) {
+    #SignUpForm .form {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 450px) {
+    #ImageContainer {
+        background-size: contain;
+        background-position: top;
+        height: 300px;
+    }
+}
